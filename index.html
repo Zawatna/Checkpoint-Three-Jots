@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="./assets/img/logo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <script id="debug-script" src="https://cdn.jsdelivr.net/gh/MickShannahan/style-debug@latest/debug.min.js"
+    defer></script>
+  <title>checkpoint3-jots</title>
+</head>
+
+<body class="debug" cdata-bs-theme="light">
+  <header>
+    <nav class="navbar bg-codeworks text-light gap-2 px-2">
+      <img src="./assets/img/logo.png" height="45" alt="" loading="lazy">
+      <div><b>checkpoint3-jots</b></div>
+      <div class="ms-auto" id="authstate"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="container-fluid">
+      <div class="row">
+        <div class="col-4">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="mb-3">Jots, etc!</h2>
+
+              <!--SECTION stub for create new form-->
+              <div class="bg-warning rounded shadow mb-3 p-2">
+
+                <form onsubmit="app.JotController.createJot()" class="mb-3">Create...
+                  <div class="input-group">
+                    <select name="form-control w-50" id="">
+                      <option value="">⭐⭐⭐⭐⭐</option>
+                      <option value="">⭐⭐⭐⭐</option>
+                      <option value="">⭐⭐⭐</option>
+                      <option value="">⭐⭐</option>
+                      <option value="">⭐</option>
+                    </select>
+                    <!-- <input type="text" class="form-control w-50"> -->
+                    <input type="date" class="form-control" name="createdAt" id="jot-created-at">
+                    <button title="Create Case..." class="btn btn-outline-primary"><i
+                        class="mdi mdi-bed-outline"></i></button>
+                  </div>
+                </form>
+                <!-- <div class="col-md-4 mb-2">
+                  <label for="jot-hotel">Hotel Name</label>
+                  <input required minlength="3" maxlength="15" class="form-control" type="text" name="hotel-name"
+                    placeholder="Burj...">
+                </div>
+                <div class="col-md-4 mb-2">
+                  <label for="jot-location">Location</label>
+                  <input required minlength="2" maxlength="30" class="form-control" type="text" name="hotel-location"
+                    placeholder="Boise...">
+                </div>
+                <div class="col-md-4 mb-2">
+                  <label for="jot-body">Hotel Description</label>
+                  <input required minlength="3" maxlength="250" class="form-control" type="text" name="hotel-body"
+                    placeholder="Beautiful...">
+                </div>
+                <div class="col-md-4 mb-2">
+                  <label for="jot-color">Color</label>
+                  <input required type="color" class="form-control" type="text" name="color" placeholder="ecru...">
+                </div>
+                <div class="col-md-4 mb-2">
+                  <button type="button" class="rounded btn-outline-primary">Submit</button>
+                </div>
+              </div>
+              <div class="fs-xs list-border">
+                <div>
+                  <p class="fw-bold">Select a Hotel <i class="mdi mdi-bed-outline"></i>
+                    <span id="jot-count">3</span>
+                  </p>
+                  <hr>
+                </div> -->
+                <div class="" id="list-jots">
+                  <!-- <li role="button" id="" onclick="app.JotsController.setActiveJot('${this.id}')">${this.title}</li> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="active-jot" class="col-8">
+
+          <!--SECTION form stub
+          <div class="row active-jot-border p-2">
+            <div class="col-12">
+              <div>
+                <div class="mdi mdi-bed-outline"></i>
+                  <h3>New Hotel</h3>
+                </div>
+              </div>
+              <p class="date-style">Created on: </p>
+              <p class="date-style">Last updated: </p>
+            </div>
+            <div>
+              <form id="user-form" class="form-control">
+                <textarea name="body" id="" class="active-jot-box"></textarea>
+              </form>
+            </div>
+            <div class="text-center">
+              <button class="">Submit</button>
+              <button class="">Delete</button>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="text-bg-dark">
+    <div class="text-center">
+      <p class="mb-0"><small>Made with <i class="mdi mdi-heart text-pink"></i> by CodeWorks</small></p>
+    </div>
+  </footer>
+
+  <!-- SECTION links for bootstrap, axios, and auth -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jakeoverall/auth0provider-client/browser/Auth0Provider.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <!-- !SECTION -->
+  <!-- The start of our javascript -->
+  <script src="app/App.js" type="module"></script>
+
+</body>
+
+</html>
