@@ -16,12 +16,22 @@ class JotsService {
         console.log("💾 save active Jot")
     }
 
-    createJot(formData) {
-        const jot = new Jot(formData)
+    createJot(jotData) {
+        const jot = new Jot(jotData)
         console.log('📃', jot);
         AppState.jots.unshift(jot)
-        this.saveActiveJot()
+        AppState.activeJot = jot
     }
+
+    saveJots() {
+        saveState('jots', AppState.jots)
+    }
+
+    updateJot(body) {
+        AppState.activeJot.body = body
+        this.saveJots()
+    }
+
 }
 
 export const jotsService = new JotsService()

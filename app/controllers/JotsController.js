@@ -7,15 +7,18 @@ export class JotsController {
         console.log('Hello from JotsController!')
         this.drawJots()
         AppState.on('activeJot', this.drawActiveJots)
+        AppState.on('jots', this.drawJots)
         // this.drawActiveJots()
     }
 
     drawJots() {
-        const listJotsElem = document.getElementById('list-jots')
-        let listJots = ''
         const jots = AppState.jots
+        let listJots = ''
         jots.forEach(jot => listJots += jot.ListTemplate)
+        const listJotsElem = document.getElementById('list-jots')
+        const countElm = document.getElementById('jot-count')
         listJotsElem.innerHTML = listJots
+        countElm.innerHTML = jots.length.toString()
         console.log(listJotsElem)
     }
 
@@ -47,9 +50,9 @@ export class JotsController {
         // @type { HTMLFormElement }
         const form = event.target
         const jotData = getFormData(form)
-        console.log('submitted', form, jotData);
-        console.log('jot data', jotData);
-        jotsService.createJot(jotData)
+        console.log('submitted', form, FormData);
+        console.log('jot data', FormData);
+        jotsService.createJot(FormData)
         form.reset()
 
     }

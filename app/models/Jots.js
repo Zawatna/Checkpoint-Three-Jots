@@ -10,8 +10,8 @@ export class Jot {
     this.location = data.location
     this.color = data.color
     this.body = data.body
-    this.createdAt = data.createdAt
-    this.updatedAt = data.updatedAt
+    this.createdAt = data.createdAt = new Date(data.createdAt)
+    this.updatedAt = data.updatedAt ? new Date(data.updatedAt) : new Date()
 
   }
 
