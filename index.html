@@ -39,7 +39,7 @@
                   <h5>Create a Jot...</h5>
                   <div class="input-group mb-3">
                     <label for="number-of-stars">Number of Stars</label>
-                    <select name="form-control w-50" id="number-of-stars">
+                    <select class="p-2" name="form-control w-50" id="number-of-stars">
                       <option value="">⭐⭐⭐⭐⭐</option>
                       <option value="">⭐⭐⭐⭐</option>
                       <option value="">⭐⭐⭐</option>
@@ -50,7 +50,19 @@
                   <label for="hotel-name">Name of Hotel</label>
                   <input required minlength="3" maxlength="15" class="form-control mb-3" type="text" name="hotel"
                     id="hotel-name" placeholder="Burj...">
-
+                  <div class="input-group mb-3">
+                    <label for="location" class="p-2">Location</label>
+                    <select name="form-control w-50" id="location">
+                      <option value="">USA</option>
+                      <option value="">CAN</option>
+                      <option value="">FRA</option>
+                      <option value="">AUS</option>
+                      <option value="">GBR</option>
+                      <option value="">GER</option>
+                      <option value="">NOR</option>
+                      <option value="">UAE</option>
+                    </select>
+                  </div>
                   <div class="drop-down">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="drop-down"
                       aria-expanded="false">Select a Color
@@ -69,8 +81,8 @@
 
                   <button title="Create Case..." class="btn btn-outline-primary"><i
                       class="mdi mdi-bed-outline"></i></button>
+                </form>
               </div>
-              </form>
               <!-- <div class="col-md-4 mb-2">
                   <label for="jot-hotel">Hotel Name</label>
                   <input required minlength="3" maxlength="15" class="form-control" type="text" name="hotel-name"
@@ -115,12 +127,12 @@
             </div>
           </div>
         </div>
-      </div>
 
 
-      <div id="active-jot" class="col-8">
 
-        <!--SECTION form stub
+        <div id="active-jot" class="col-8">
+
+          <!--SECTION form stub
           <div class="row active-jot-border p-2">
             <div class="col-12">
               <div>
@@ -141,8 +153,8 @@
               <button class="">Delete</button>
             </div>
           </div> -->
-      </div>
-      </div>
+        </div>
+
       </div>
     </section>
 

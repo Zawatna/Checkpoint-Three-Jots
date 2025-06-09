@@ -24,7 +24,7 @@ export class Jot {
 
   get ActiveJotTemplate() {
     return `
-        <div class="row active-jot-border p-2">
+        <div class="row active-jot-border">
             <div class="col-12">
                 <div>
                   <div class="text-end">#${this.jotNumber}</div>
