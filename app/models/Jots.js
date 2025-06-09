@@ -5,13 +5,14 @@ export class Jot {
 
   constructor(data) {
     this.id = data.id || generateId()
-    this.jotNumber = this.id + '-' + this.id.slice(1, 10).toUpperCase()
     this.stars = data.stars
     this.hotel = data.hotel
+    this.jotNumber = this.hotel + '-' + this.id.slice(5, 10).toUpperCase()
     this.location = data.location
     this.color = data.color
     this.body = data.body || ''
-    this.createdAt = data.createdAt = new Date(data.createdAt)
+    // FIXME this is not an optional, this or that, this is just poor JS that doesn't work as intended
+    this.createdAt = new Date(data.createdAt)
     this.updatedAt = data.updatedAt ? new Date(data.updatedAt) : new Date()
 
   }
@@ -42,11 +43,11 @@ export class Jot {
               </form>
             </div>
             <div class="d-flex justify-content-between">
-              <button id="" class="text-info fw-bold" onclick="app.JotsController.saveActiveJot()">Submit</button>
+              <button id="" class="text-info fw-bold" onclick="app.JotsController.saveActiveJot()">Save Jot</button>
               <button type="button" class="" onclick="app.JotsController.deleteActiveJot()">Delete</button>
             </div>
         </div>
-       `
+     `
   }
 
   get CreatedAtFormatted() {

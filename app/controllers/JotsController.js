@@ -8,7 +8,7 @@ export class JotsController {
         this.drawJots()
         AppState.on('activeJot', this.drawActiveJots)
         AppState.on('jots', this.drawJots)
-        // this.drawActiveJots()
+        jotsService.loadJots()
     }
 
     drawJots() {
@@ -30,9 +30,15 @@ export class JotsController {
 
     drawActiveJots() {
         console.log('⚙️')
-        const activeJotElem = document.getElementById('active-jot')
         const activeJot = AppState.activeJot
-        activeJotElem.innerHTML = activeJot.ActiveJotTemplate
+        const activeJotElem = document.getElementById('active-jot')
+        if (AppState.activeJot == null) {
+            return
+        }
+        else {
+
+            activeJotElem.innerHTML = activeJot.ActiveJotTemplate
+        }
     }
 
     saveActiveJot() {
@@ -56,7 +62,7 @@ export class JotsController {
     }
 
     deleteActiveJot() {
-        console.log('deleting jot')
+        console.log('deleting hotel')
         const confirmed = confirm('Are you sure you want to delete this Hotel?')
         if (confirmed == false) return
         jotsService.deleteActiveJot()

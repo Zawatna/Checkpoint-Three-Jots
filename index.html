@@ -38,32 +38,45 @@
                 <form onsubmit="app.JotsController.createJot()" class="mb-3">
                   <h5>Create a Jot...</h5>
                   <div class="input-group mb-1">
+                    <!-- REVIEW name was bad, and no values in options -->
                     <label for="number-of-stars">Number of Stars</label>
-                    <select class="p-2" name="form-control w-50" id="number-of-stars">
-                      <option value="">⭐⭐⭐⭐⭐</option>
-                      <option value="">⭐⭐⭐⭐</option>
-                      <option value="">⭐⭐⭐</option>
-                      <option value="">⭐⭐</option>
-                      <option value="">⭐</option>
+                    <select class="p-2" name="stars" id="number-of-stars">
+                      <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
+                      <option value="⭐⭐⭐⭐">⭐⭐⭐⭐</option>
+                      <option value="⭐⭐⭐">⭐⭐⭐</option>
+                      <option value="⭐⭐">⭐⭐</option>
+                      <option value="⭐">⭐</option>
+                    </select>
+                  </div>
+                  <div class="input-group mb-1">
+                    <label for="hotel-color" class="">Color Code</label>
+                    <select class="p-2" name="color" id="hotel-color">
+                      <option value="Green">Green (5-Star)</option>
+                      <option value="Blue">Blue (4-Star)</option>
+                      <option value="Red">Red (3-Star)</option>
+                      <option value="Yellow">Yellow (2-Star)</option>
+                      <option value="Black">Black (1-Star)</option>
                     </select>
                   </div>
                   <label for="hotel-name">Name of Hotel</label>
                   <input required minlength="3" maxlength="15" class="form-control mb-1" type="text" name="hotel"
                     id="hotel-name" placeholder="Burj...">
                   <div class="input-group mb-1">
-                    <label for="location" class="p-2">Location</label>
-                    <select name="form-control w-50" id="location">
-                      <option value="">USA</option>
-                      <option value="">CAN</option>
-                      <option value="">FRA</option>
-                      <option value="">AUS</option>
-                      <option value="">GBR</option>
-                      <option value="">GER</option>
-                      <option value="">NOR</option>
-                      <option value="">UAE</option>
+                    <!-- FIXME name is messed up, and no values in options -->
+                    <label for="hotel-location" class="p-2">Location</label>
+                    <select class="p-2" name="location" id="hotel-location">
+                      <option value="USA">USA</option>
+                      <option value="CAN">CAN</option>
+                      <option value="FRA">FRA</option>
+                      <option value="AUS">AUS</option>
+                      <option value="GBR">GBR</option>
+                      <option value="GER">GER</option>
+                      <option value="NOR">NOR</option>
+                      <option value="UAE">UAE</option>
                     </select>
                   </div>
-                  <div class="drop-down">
+                  <!-- FIXME this should be turned back into a select with options -->
+                  <!-- <div class="drop-down">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="drop-down"
                       aria-expanded="false">Select a Color
                     </button>
@@ -74,10 +87,10 @@
                       <li><a class="dropdown-item color-option yellow" href="#"></a></li>
                       <li><a class="dropdown-item color-option black" href="#"></a></li>
                     </ul>
-                  </div>
-
+                  </div> -->
+                  <!-- 
                   <label for="jot-created-at">Date Created</label>
-                  <input type="date" class="form-control mb-1" name="createdAt" id="jot-created-at">
+                  <input type="date" class="form-control mb-1" name="createdAt" id="jot-created-at"> -->
 
                   <button title="Create Case..." class="btn btn-outline-primary mt-1"><i
                       class="mdi mdi-bed-outline"></i></button>
@@ -149,7 +162,7 @@
               </form>
             </div>
             <div class="text-center">
-              <button class="">Submit</button>
+              <button class="">Save Jot</button>
               <button class="">Delete</button>
             </div>
           </div> -->
