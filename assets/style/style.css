@@ -28,7 +28,7 @@ main {
 
 .active-jot-border {
   border-style: dashed;
-  border-width: thick;
+  border-width: thin;
   border-color: blueviolet;
   height: 75dvh;
   width: 100%;

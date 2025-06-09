@@ -33,24 +33,45 @@
               <h2 class="mb-3">Jots, etc!</h2>
 
               <!--SECTION stub for create new form-->
-              <div class="bg-warning rounded shadow mb-3 p-2">
+              <div class="bg-warning rounded shadow mb-3 p-1">
 
-                <form onsubmit="app.JotController.createJot()" class="mb-3">Create...
-                  <div class="input-group">
-                    <select name="form-control w-50" id="">
+                <form onsubmit="app.JotsController.createJot()" class="mb-3">
+                  <h5>Create a Jot...</h5>
+                  <div class="input-group mb-3">
+                    <label for="number-of-stars">Number of Stars</label>
+                    <select name="form-control w-50" id="number-of-stars">
                       <option value="">⭐⭐⭐⭐⭐</option>
                       <option value="">⭐⭐⭐⭐</option>
                       <option value="">⭐⭐⭐</option>
                       <option value="">⭐⭐</option>
                       <option value="">⭐</option>
                     </select>
-                    <!-- <input type="text" class="form-control w-50"> -->
-                    <input type="date" class="form-control" name="createdAt" id="jot-created-at">
-                    <button title="Create Case..." class="btn btn-outline-primary"><i
-                        class="mdi mdi-bed-outline"></i></button>
                   </div>
-                </form>
-                <!-- <div class="col-md-4 mb-2">
+                  <label for="hotel-name">Name of Hotel</label>
+                  <input required minlength="3" maxlength="15" class="form-control mb-3" type="text" name="hotel"
+                    id="hotel-name" placeholder="Burj...">
+
+                  <div class="drop-down">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="drop-down"
+                      aria-expanded="false">Select a Color
+                    </button>
+                    <ul class="input-group dropdown-menu">
+                      <li><a class="dropdown-item color-option green" href="#"></a></li>
+                      <li><a class="dropdown-item color-option blue" href="#"></a></li>
+                      <li><a class="dropdown-item color-option red" href="#"></a></li>
+                      <li><a class="dropdown-item color-option yellow" href="#"></a></li>
+                      <li><a class="dropdown-item color-option black" href="#"></a></li>
+                    </ul>
+                  </div>
+
+                  <label for="jot-created-at">Date Created</label>
+                  <input type="date" class="form-control mb-3" name="createdAt" id="jot-created-at">
+
+                  <button title="Create Case..." class="btn btn-outline-primary"><i
+                      class="mdi mdi-bed-outline"></i></button>
+              </div>
+              </form>
+              <!-- <div class="col-md-4 mb-2">
                   <label for="jot-hotel">Hotel Name</label>
                   <input required minlength="3" maxlength="15" class="form-control" type="text" name="hotel-name"
                     placeholder="Burj...">
@@ -80,25 +101,26 @@
                   </p>
                   <hr>
                 </div> -->
-                <div>
-                  <p class="">Select a Hotel</p>
-                  <div class="fw-bold"><i class="mdi mdi-bed-outline"></i>
+              <div>
+                <div class="fw-bold">
+                  <h5>Select a Jot... <i class="mdi mdi-bed-outline"></i>
                     <span id="jot-count"></span>
-                  </div>
-                  <hr />
+                    </h4>
                 </div>
-                <div class="" id="list-jots">
-                  <!-- <li role="button" id="" onclick="app.JotsController.setActiveJot('${this.id}')">${this.title}</li> -->
-                </div>
+                <hr />
+              </div>
+              <div class="" id="list-jots">
+                <!-- <li role="button" id="" onclick="app.JotsController.setActiveJot('${this.id}')">${this.title}</li> -->
               </div>
             </div>
           </div>
         </div>
+      </div>
 
 
-        <div id="active-jot" class="col-8">
+      <div id="active-jot" class="col-8">
 
-          <!--SECTION form stub
+        <!--SECTION form stub
           <div class="row active-jot-border p-2">
             <div class="col-12">
               <div>
@@ -119,7 +141,7 @@
               <button class="">Delete</button>
             </div>
           </div> -->
-        </div>
+      </div>
       </div>
       </div>
     </section>

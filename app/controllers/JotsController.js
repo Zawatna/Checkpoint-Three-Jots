@@ -25,7 +25,6 @@ export class JotsController {
     setActiveJot(jotId) {
         console.log('clicked on the jot');
         console.log(jotId)
-
         jotsService.getActiveJot(jotId)
     }
 
@@ -50,11 +49,17 @@ export class JotsController {
         // @type { HTMLFormElement }
         const form = event.target
         const jotData = getFormData(form)
-        console.log('submitted', form, FormData);
-        console.log('jot data', FormData);
-        jotsService.createJot(FormData)
+        console.log('submitted', form, jotData);
+        console.log('jot data', jotData);
+        jotsService.createJot(jotData)
         form.reset()
+    }
 
+    deleteActiveJot() {
+        console.log('deleting jot')
+        const confirmed = confirm('Are you sure you want to delete this Hotel?')
+        if (confirmed == false) return
+        jotsService.deleteActiveJot()
     }
 
 }
