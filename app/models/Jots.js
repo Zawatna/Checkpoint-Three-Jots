@@ -12,7 +12,7 @@ export class Jot {
     this.color = data.color
     this.body = data.body || ''
     // FIXME this is not an optional, this or that, this is just poor JS that doesn't work as intended
-    this.createdAt = new Date(data.createdAt)
+    this.createdAt = data.createdAt ? new Date(data.createdAt) : new Date()
     this.updatedAt = data.updatedAt ? new Date(data.updatedAt) : new Date()
 
   }

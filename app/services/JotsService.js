@@ -12,7 +12,7 @@ class JotsService {
         AppState.jots.unshift(jot)
         AppState.activeJot = jot
         this.saveJots()
-        this.saveActiveJot()
+        // this.saveActiveJot()
     }
 
     getActiveJot(jotId) {
