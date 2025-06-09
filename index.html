@@ -37,7 +37,7 @@
 
                 <form onsubmit="app.JotsController.createJot()" class="mb-3">
                   <h5>Create a Jot...</h5>
-                  <div class="input-group mb-3">
+                  <div class="input-group mb-1">
                     <label for="number-of-stars">Number of Stars</label>
                     <select class="p-2" name="form-control w-50" id="number-of-stars">
                       <option value="">⭐⭐⭐⭐⭐</option>
@@ -48,9 +48,9 @@
                     </select>
                   </div>
                   <label for="hotel-name">Name of Hotel</label>
-                  <input required minlength="3" maxlength="15" class="form-control mb-3" type="text" name="hotel"
+                  <input required minlength="3" maxlength="15" class="form-control mb-1" type="text" name="hotel"
                     id="hotel-name" placeholder="Burj...">
-                  <div class="input-group mb-3">
+                  <div class="input-group mb-1">
                     <label for="location" class="p-2">Location</label>
                     <select name="form-control w-50" id="location">
                       <option value="">USA</option>
@@ -77,9 +77,9 @@
                   </div>
 
                   <label for="jot-created-at">Date Created</label>
-                  <input type="date" class="form-control mb-3" name="createdAt" id="jot-created-at">
+                  <input type="date" class="form-control mb-1" name="createdAt" id="jot-created-at">
 
-                  <button title="Create Case..." class="btn btn-outline-primary"><i
+                  <button title="Create Case..." class="btn btn-outline-primary mt-1"><i
                       class="mdi mdi-bed-outline"></i></button>
                 </form>
               </div>
